@@ -1,0 +1,44 @@
+public class Apple {
+    //instance variables
+    String type; // macintosh, green, red, ...
+
+    /**
+     * This is the default constructor that gets called when you use
+     * Apple a = new Apple(); which creates an Apple object named a.
+     */
+
+    public Apple() {
+        // in here you initialize instance variables, and sometimes but rarely
+        // do other functionality (at least with basic objects)
+        this.type = "macintosh"; // the 'this' keyword refers to 'this' object. so this.type refers to Apple's 'type' instance variable.
+    }
+
+    /**
+     * this is another constructor with a parameter. You can have more than one
+     * constructor as long as they have different parameters. It creates an Apple
+     * object when called using Apple a = new Apple("someAppleType");
+     */
+    public Apple(String t) {
+        // when the constructor is called (i.e new Apple() ) this code is executed
+        this.type = t;
+    }
+
+    /**
+     * methods in a class are functions. They are whatever functionality needed
+     * for the object
+     */
+    public String someAppleRelatedMethod(){
+        return "hello, Apple class!";
+    }
+
+    public static void main(String[] args) {
+        // construct an apple
+        Apple a = new Apple("green");
+        // 'a' is now an Apple object and has all the methods and
+        // variables of the Apple class.
+        // To use a method from 'a':
+        String temp = a.someAppleRelatedMethod();
+        System.out.println(temp);
+        System.out.println("a's type is " + a.type);
+    }
+}

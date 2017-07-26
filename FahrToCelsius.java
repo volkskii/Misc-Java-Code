@@ -1,5 +1,6 @@
 import java.util.Scanner;
 
+// Converting Fahrenheit to Celsius
 public class FahrToCelsius {
 	public static void main(String[] args) {
 
